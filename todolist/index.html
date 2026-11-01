@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="todo-container">
+        <header class="header">
+            <div class="logo">✓ TaskFlow</div>
+            <h1>My To-Do List</h1>
+            <p>Organize your tasks and stay productive!</p>
+        </header>
+
+        <section class="todo-card">
+            <form id="taskForm" class="input-section">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What do you need to do?"
+                    maxlength="150"
+                    required
+                    aria-label="New task"
+                >
+                <button type="submit" class="add-btn">
+                    + Add Task
+                </button>
+            </form>
+
+            <div class="task-stats">
+                <span id="totalCount">0 Total</span>
+                <span id="activeCount">0 Active</span>
+                <span id="completedCount">0 Completed</span>
+            </div>
+
+            <div class="filters" id="filters">
+                <button class="filter-btn active"
+                        data-filter="all">All</button>
+                <button class="filter-btn"
+                        data-filter="active">Active</button>
+                <button class="filter-btn"
+                        data-filter="completed">Completed</button>
+            </div>
+
+            <ul id="taskList" class="task-list"></ul>
+
+            <div id="emptyState" class="empty-state">
+                <div class="empty-icon">📝</div>
+                <h3>No tasks found</h3>
+                <p>Add a task or try another filter.</p>
+            </div>
+
+            <div class="task-footer">
+                <span id="remainingText">0 tasks remaining</span>
+                <button id="clearCompleted" class="clear-btn">
+                    Clear Completed
+                </button>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <p>Made by Sirivalli Ravula | 2026</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
